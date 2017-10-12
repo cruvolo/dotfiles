@@ -1,4 +1,5 @@
-" Vim syntax to add support to git log --graph
+" Vim syntax to add support to git log --graph and git log --stat
+" Author: Chris Ruvolo https://github.com/cruvolo
 
 source $VIMRUNTIME/syntax/git.vim
 
