@@ -1,4 +1,7 @@
 # git dotfiles management
+# to clone to a new machine:
+#   $ git clone --separate-git-dir=$HOME/src/dotfiles.git https://github.com/cruvolo/dotfiles.git $HOME
+#
 alias dotfiles	'git --git-dir=$HOME/src/dotfiles.git --work-tree=$HOME'
 
 alias	ls	ls-F
