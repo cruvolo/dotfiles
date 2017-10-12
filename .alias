@@ -8,6 +8,7 @@ alias	su	"`which su` -"
 alias	rdiff	'diff -urN -x \*.orig -x \*.rej -x \*~ -x \*.bak -x .\* $1 $2'
 alias	beep	echo ""
 alias	grep	grep --color=auto
+alias   bc      '/usr/bin/bc ~/.bcrc'
 
 #if ( $?DISPLAY ) then
 #  alias aoeu	"xmodmap $HOME/.keyboard.default"
