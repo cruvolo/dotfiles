@@ -1,0 +1,29 @@
+# git dotfiles management
+alias dotfiles	'git --git-dir=$HOME/src/dotfiles.git --work-tree=$HOME'
+
+alias	ls	ls-F
+alias	vi	vim
+unalias su
+alias	su	"`which su` -"
+alias	rdiff	'diff -urN -x \*.orig -x \*.rej -x \*~ -x \*.bak -x .\* $1 $2'
+alias	beep	echo ""
+alias	grep	grep --color=auto
+
+#if ( $?DISPLAY ) then
+#  alias aoeu	"xmodmap $HOME/.keyboard.default"
+#  alias asdf	"xmodmap $HOME/.keysym.ms.dvorak"
+#endif
+
+if ( ! $?HOSTNAME ) then
+  setenv HOSTNAME "`hostname -s`"
+endif
+
+#if ( ( $?COLORTERM ) || ( "x$TERM" == xrxvt ) || ( "x$TERM" == xxterm ) || ( "x$TERM" == xxterm-color ) ) then
+#  unalias postcmd
+#  alias	postcmd	'echo -n "]2;${USER} @ ${HOSTNAME}: $cwd > \!#"'
+#endif
+
+if ( -e ~/.alias.local ) then
+  source ~/.alias.local
+endif
+
