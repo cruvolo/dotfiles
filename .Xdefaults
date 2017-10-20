@@ -1,0 +1,28 @@
+UXTerm*.faceName:	inconsolata
+
+URxvt*background:       black
+URxvt*foreground:       grey90
+URxvt*scrollstyle:      plain
+URxvt*scrollBar:        false
+URxvt*font:             xft:Inconsolata:size=13.5
+! blues -- from xterm
+URxvt*color4:           #0000EE
+URxvt*color12:          #5C5CFF
+
+URxvt.perl-ext-common:  default,matcher,font-size
+URxvt.url-launcher:     /usr/bin/xdg-open
+URxvt.matcher.button:   1
+
+! for urxvt < 9.21
+URxvt.keysym.C-equal:	perl:font-size:increase
+URxvt.keysym.C-minus:	perl:font-size:decrease
+URxvt.keysym.C-0:	perl:font-size:reset
+
+
+
+Xft*dpi:                96
+Xft*antialias:          True
+!Xft*hinting:           Full
+Xft*hinting:            1
+Xft*hintstyle:          hintslight
+!
