@@ -18,6 +18,10 @@ xset dpms 300 600
 xmodmap - < $HOME/.xmodmap.rc
 #xmodmap -e 'keycode 116 = Kanji'  # right Windows key
 
+if [ "x$HOSTNAME" = "xhork" -o `cat /etc/hostname 2> /dev/null` = "hork" ]; then
+  setxkbmap -option compose:menu
+fi
+
 #kinput2-wnn -wnn &
 #licq &
 #xscreensaver &
