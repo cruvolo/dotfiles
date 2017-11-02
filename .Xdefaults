@@ -13,7 +13,7 @@ URxvt.perl-ext-common:  default,matcher,font-size
 URxvt.url-launcher:     /usr/bin/xdg-open
 URxvt.matcher.button:   1
 
-URxvt.matcher.pattern.1:	\/[ru]\/\\w+
+URxvt.matcher.pattern.1:	\/[ru]\/[\\w-]+
 URxvt.matcher.launcher.1:	/usr/bin/xdg-open https:\/\/reddit.com$0
 
 ! for urxvt < 9.21
