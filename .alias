@@ -1,6 +1,10 @@
 # git dotfiles management
 # to clone to a new machine:
-#   $ git clone --separate-git-dir=$HOME/src/dotfiles.git https://github.com/cruvolo/dotfiles.git $HOME
+#   $ mkdir $HOME/src
+#   $ git clone --separate-git-dir=$HOME/src/dotfiles.git https://github.com/cruvolo/dotfiles.git $HOME/dotfiles
+#   $ rm $HOME/dotfiles/.git
+#   $ mv $HOME/dotfiles/.[a-z]* $HOME
+#   $ rmdir $HOME/dotfiles
 #   $ source $HOME/.alias
 #   $ dotfiles config --local status.showUntrackedFiles no
 #
