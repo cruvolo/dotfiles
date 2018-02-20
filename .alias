@@ -19,6 +19,9 @@ alias	beep	echo ""
 alias	grep	grep --color=auto
 alias   bc      '/usr/bin/bc ~/.bcrc'
 
+# cleanup all but the last mosh-server process
+alias	mosh-clean	'kill `ps -def --sort start_time | grep mosh-server | grep -v grep | head -n -1 | awk \{print\ \$2\}`'
+
 #if ( $?DISPLAY ) then
 #  alias aoeu	"xmodmap $HOME/.keyboard.default"
 #  alias asdf	"xmodmap $HOME/.keysym.ms.dvorak"
