@@ -68,8 +68,10 @@ if has("syntax")
   hi clear SpellBad
   hi SpellBad term=underline ctermbg=red guibg=red
 
-  " 256-color required
-  colorscheme spacegray
+  if &term != "linux"
+    " 256-color required
+    colorscheme spacegray
+  endif
 endif
 
 if has("folding")
