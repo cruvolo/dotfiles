@@ -1,5 +1,9 @@
 # .cshrc
 
+if (! $?LOGINLOADED) then
+  source $HOME/.login
+endif
+
 # interactive shell?
 if ( $?prompt ) then
   # turn on filename completion in csh - default on in tcsh
@@ -109,6 +113,5 @@ if ( $?prompt ) then
   endif
 
 endif
-
 
 # vim:sw=2 sts=2
