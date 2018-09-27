@@ -114,6 +114,8 @@ if has("autocmd") && !exists("autocommands_loaded")
   autocmd BufRead,BufNewFile *.tex set sts=2 sta sw=2 ts=8 noexpandtab
   autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_us
 
+  autocmd BufRead,BufNewFile *.proto set sts=2 sw=2 sta ts=8 expandtab
+
   autocmd BufRead,BufNewFile mutt-*-\d\+,mutt\w\{6\} set tw=76
   autocmd BufRead,BufNewFile mutt-*-\d\+,mutt\w\{6\} setlocal spell spelllang=en_us
   autocmd BufRead,BufNewFile */.mutt* set ft=muttrc

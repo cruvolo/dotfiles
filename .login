@@ -7,3 +7,6 @@ setenv PAGER		"less"
 if ( -e ~/.login.local ) then
   source ~/.login.local
 endif
+
+setenv LOGINLOADED "1"
+
