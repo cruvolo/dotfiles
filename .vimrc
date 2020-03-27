@@ -118,6 +118,8 @@ if has("autocmd") && !exists("autocommands_loaded")
 
   autocmd BufRead,BufNewFile mutt-*-\d\+,mutt\w\{6\} set tw=76
   autocmd BufRead,BufNewFile mutt-*-\d\+,mutt\w\{6\} setlocal spell spelllang=en_us
+  autocmd BufRead,BufNewFile neomutt-*-\d\+,neomutt\w\{6\} set tw=76
+  autocmd BufRead,BufNewFile neomutt-*-\d\+,neomutt\w\{6\} setlocal spell spelllang=en_us
   autocmd BufRead,BufNewFile */.mutt* set ft=muttrc
   autocmd BufRead,BufNewFile *Dockerfile set ft=dockerfile
 endif
