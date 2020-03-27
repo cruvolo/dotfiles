@@ -6,3 +6,23 @@
 	helper = cache --timeout=3600
 [push]
 	default = simple
+
+
+[alias]
+  aa = add --all
+  aliases = !git config --list | grep alias | cut -c 7-
+  ap = add --patch
+  ca = commit --amend
+  ci = commit
+  co = checkout
+  co-pr = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
+  coi = checkout-interactive
+  cp = cherry-pick
+  dmb = delete-merged-branches
+  done = !git checkout master && git pull && git delete-merged-branches --yes
+  l = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  pr = !hub pull-request
+  root = rev-parse --show-toplevel
+  st = status --branch --short
+  su = submodule update --init --recursive
+  up = !git fetch origin && git rebase origin/master
