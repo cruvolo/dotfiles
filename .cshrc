@@ -27,6 +27,12 @@ if ( $?prompt ) then
   # for color ls-F
   set color
 
+  # remember 2000 history
+  set history = 2000
+  # save and merge with existing
+  #set savehist = (2000 merge)
+  #set histfile = ~/.tcsh_history
+
   if ( -x "`which git`" ) then
     alias __git_curr_branch 'git rev-parse --abbrev-ref HEAD >& /dev/null && echo " {`git symbolic-ref -q --short HEAD || git describe --tags --exact-match`}"'
   endif
