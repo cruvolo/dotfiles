@@ -21,6 +21,9 @@ URxvt.keysym.C-equal:	perl:font-size:increase
 URxvt.keysym.C-minus:	perl:font-size:decrease
 URxvt.keysym.C-0:	perl:font-size:reset
 
+! Disable printing the terminal contents when pressing PrintScreen.
+URxvt.print-pipe: "cat > /dev/null"
+
 
 
 Xft*dpi:                96
