@@ -3,7 +3,7 @@
 # .xsession
 #
 
-export WINDOW_MANAGER=/usr/bin/e16
+export WINDOW_MANAGER="/usr/bin/e16 -t c2h8"
 
 #export LANG=C
 #export LC_CTYPE="ja_JP.UTF-8"
@@ -14,7 +14,8 @@ xrdb -merge $HOME/.Xdefaults
 
 #gmix -i
 #fetchmail -d 300
-xset dpms 300 600
+xset +dpms
+xset dpms 120 120 120
 xmodmap - < $HOME/.xmodmap.rc
 #xmodmap -e 'keycode 116 = Kanji'  # right Windows key
 
