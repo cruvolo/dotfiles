@@ -103,12 +103,21 @@ if has("autocmd") && !exists("autocommands_loaded")
     autocmd BufRead,BufNewFile *.xml set sts=2 sta sw=2 ts=8 noexpandtab
   augroup END
 
+  augroup htmlfile
+    autocmd BufRead,BufNewFile *.html,*.htm set sts=2 sta sw=2 ts=8 noexpandtab
+  augroup END
+
   augroup javaprog
     autocmd BufRead,BufNewFile *.java set sts=4 sta sw=4 ts=4 noexpandtab
   augroup END
 
   augroup cprog
     autocmd BufRead,BufNewFile *.C,*.c,*.h,*.cc,*.H,*.cpp set sts=4 sta sw=4 ts=4 noexpandtab
+  augroup END
+
+  augroup perlprog
+    autocmd BufRead,BufNewFile *.pl set sts=2 sta sw=2 ts=8 noexpandtab
+    autocmd FileType perl set sts=2 sta sw=2 ts=8 noexpandtab
   augroup END
 
   autocmd BufRead,BufNewFile *.tex set sts=2 sta sw=2 ts=8 noexpandtab
@@ -122,6 +131,8 @@ if has("autocmd") && !exists("autocommands_loaded")
   autocmd BufRead,BufNewFile neomutt-*-\d\+,neomutt\w\{6\} setlocal spell spelllang=en_us
   autocmd BufRead,BufNewFile */.mutt* set ft=muttrc
   autocmd BufRead,BufNewFile *Dockerfile set ft=dockerfile
+
+  autocmd BufRead,BufNewfile */PULLREQ_EDITMSG* set ft=gitcommit
 
   " Transparent editing of gpg encrypted files.
   " By Wouter Hanegraaff <wouter@blub.net>
@@ -177,6 +188,8 @@ map <C-P>	:cp<CR>
 
 " changedir to the dir of the current file
 map ,cd		:cd %:p:h<CR>
+" changedir to the original dir we started in
+map ,rd		:cd $PWD<CR>
 " edit a file relative to the current file
 map ,e		:e <C-R>=expand("%:p:h")<CR>/
 " edit a file relative to the current file in a new window
