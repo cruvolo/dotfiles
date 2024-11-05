@@ -35,4 +35,4 @@
 [init]
 	defaultBranch = main
 [core]
-	excludesfile = /home/cruvolo/.gitignore
+	excludesfile = ~/.gitignore
