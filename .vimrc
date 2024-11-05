@@ -275,13 +275,14 @@ endif
 highlight Search term=reverse ctermbg=3 ctermfg=0 guifg=Black
 
 " setup local directory if it doesn't exist
-if !isdirectory( $HOME . "/.vim/" )
-    system("mkdir " . $HOME . "/.vim");
+if !isdirectory( $HOME . "/.vim/" ) && exists("*mkdir")
+    mkdir($HOME . "/.vim");
 endif
 
 " execute local setup
 if filereadable( $HOME . "/.vim/local.vim" )
     source $HOME/.vim/local.vim
-else
-    system("touch " . $HOME . "/.vim/local.vim");
+"else
+"    FIXME system does not exist now?
+"    system("touch " . $HOME . "/.vim/local.vim");
 endif
