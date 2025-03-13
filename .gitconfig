@@ -1,9 +1,10 @@
 [user]
 	email = cruvolo+git@gmail.com
+	name = "C Ruvolo"
 [color]
 	ui = true
 [credential]
-	helper = cache --timeout=3600
+	helper = cache --timeout=86400
 [push]
 	default = simple
 
